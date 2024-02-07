@@ -1,0 +1,47 @@
+* {
+    margin: 0;
+}
+
+body {
+    font-family: 'Cuprum', sans-serif;
+}
+
+
+.license h1 {
+    text-align: center;
+
+}
+
+.license {
+    padding: 100px;
+    text-align: justify;
+
+}
+
+
+
+@media (max-width:1200px) {
+    .contaner {
+        max-width: 970px;
+    }
+}
+
+@media (max-width:992px) {
+    .contaner {
+        max-width: 750px;
+    }
+
+
+
+}
+
+@media (max-width:767px) {
+    .contaner {
+        max-width: none;
+    }
+
+    .license {
+        padding: 35px;
+        width: 350px;
+    }
+}

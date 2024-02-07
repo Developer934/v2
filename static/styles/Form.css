@@ -1,0 +1,657 @@
+body {
+    font-family: 'Cuprum', sans-serif;
+}
+
+.wrapper {
+    /* height: 100%; */
+    line-height: 1;
+    font-size: 14px;
+}
+
+.form {
+    /* установили макс. ширину */
+    max-width: 450px;
+    /* установили форму по центру */
+    margin: 0px auto;
+    color: white;
+    padding: 10px 0;
+}
+
+/* заголовок edit отп дан на почту */
+.form_title {
+    font-size: 25px;
+    font-weight: 700;
+    margin: 0px 0px 5px 0px;
+    min-width: 110%;
+    /* добавил что бы вытянуть заголовки описания imput */
+}
+
+/* делаем поля форм */
+.form_item {
+    margin: 0px 0px 10px 0px;
+}
+
+.form_label {
+    font-size: 12px;
+    display: block;
+    margin: 0px 0px 10px 0px;
+    text-align: left;
+}
+
+/* редактируем поля ввода */
+.form_input {
+    height: 30px;
+    padding: 0px 20px;
+    border-radius: 5px;
+    width: 100%;
+    font-size: 18px;
+    transition: all 0.5s ease 0s;
+    background-color: #d4d9d7f6;
+}
+
+/* редактируем поле ввода сообщения компании */
+textarea.form_input {
+    min-height: 80px;
+    /* свойство позволяет растягивать лишь вертикально коно */
+    resize: vertical;
+    padding: 20px;
+}
+
+/* скрыли кружки для красоты правша левша */
+.options_input {
+    display: none;
+}
+
+
+/* увеличили правша левша */
+.options_label {
+    display: inline-flex;
+    font-size: 16px;
+    line-height: 140%;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+}
+
+/* рисуем кружок, саму обводку */
+.options_label::before {
+    content: "";
+    align-self: flex-start;
+    /* ширина */
+    flex: 0 0 24px;
+    height: 24px;
+    background-color: rgb(17, 119, 37);
+    border-radius: 50%;
+    /* в право на 10 пикселей */
+    margin: 0px 10px 0px 0px;
+
+}
+
+.options_item {
+    margin: 0px 0px 10px 0px;
+}
+
+.options {
+    padding: 10px 0px 0px 0px;
+}
+
+.options_label::after {
+    transition: transform 0.3s ease 0s;
+    content: "";
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    width: 16px;
+    height: 16px;
+    background-color: #58b625;
+    border-radius: 50%;
+    /* скрыли кружок */
+    transform: scale(0);
+
+
+}
+
+.options_input:checked+.options_label::after {
+    transform: scale(1);
+}
+
+/* выпадающий список select */
+
+.select {
+    height: 50px;
+    width: 100%;
+    border-radius: 5px;
+    font-size: 18px;
+    padding: 0px 20px;
+}
+
+
+.file_item {
+    position: relative;
+}
+
+.checkbox_label A {
+    color: white !important;
+    padding: 5px;
+    text-decoration: underline;
+}
+
+
+
+
+.file_input {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    font-size: 0;
+    cursor: pointer;
+}
+
+/* бутафорная кнопка */
+.file_button {
+    display: inline-flex;
+    min-height: 40px;
+    border-radius: 30px;
+    justify-content: center;
+    align-items: center;
+    background-color: #77608d;
+    padding: 0px 20px;
+}
+
+.file_preview {
+    display: inline-block;
+    max-width: 100px;
+    padding: 10px 0px 0px 0px;
+}
+
+.file_preview img {
+    max-width: 100%;
+}
+
+.checkbox._error .checkbox_label::before {
+    box-shadow: 0 0 15px red;
+}
+
+
+
+/* оригинальный квадрат скрыли согласия на обработку */
+.checkbox_input {
+    display: none;
+}
+
+.checkbox_label {
+    font-size: 13px;
+    line-height: 140%;
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.checkbox_label::before {
+    content: "";
+    align-self: flex-start;
+    flex: 0 0 24px;
+    height: 24px;
+    background-color: #d4d9d7f6;
+    border-radius: 4px;
+    margin: 0px 10px 0px 0px;
+
+}
+
+.checkbox_label a {
+    color: #7a956b;
+}
+
+/* делаем галочку после подтверждения данных */
+.checkbox_label::after {
+    transition: transform 0.5s ease 0s;
+    content: "";
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    background-color: #7a956b;
+    border-radius: 4px;
+    transform: scale(0);
+}
+
+.checkbox_input:checked+.checkbox_label::after {
+    transform: scale(1);
+}
+
+/* кнопка отправки формы */
+
+.form_button {
+    width: 105%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 45px;
+    background-color: #7a956b78;
+    color: #fff;
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 700;
+    cursor: pointer;
+    border-radius: 20px;
+    box-shadow: 0 5px 0 #161b13;
+    transition: background-color 0.5 ease 0s;
+    position: relative;
+    top: 0;
+    margin: 10px;
+}
+
+
+
+.form_button:hover {
+    background-color: #4f6146;
+}
+
+.form_button:active {
+    top: 3px;
+    box-shadow: 0 2px 0 #161b13;
+}
+
+/* убрали выделение элементов при переключении на табы */
+.form * {
+    outline: none;
+}
+
+/* сделаем своё выделение? подсветка цветом */
+.form_input:focus {
+    box-shadow: 0 0 15px #7a956b;
+}
+
+.form_input._error {
+    box-shadow: 0 0 15px red;
+}
+
+
+/* _sending */
+
+
+/* выведем картинку после отправки пользователю,но нужно подобрать спец картинку загрузки */
+.form_body {
+    position: relative;
+
+
+}
+
+.form_body::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 110%;
+    height: 100%;
+    background: rgba(51, 51, 51, 0.9) url('../imguslug/l4.gif') center / 50px no-repeat;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s ease 0s;
+}
+
+.form_body._sending::after {
+    opacity: 1;
+    visibility: visible;
+
+}
+
+
+/* Адаптация для всех устройств, минимальная ширина что бы блоки не ехали*/
+@media (max-width:1200px) {
+    .contaner {
+        max-width: 970px;
+    }
+}
+
+/* для планшетов */
+@media (max-width:1024px) {
+    .contaner {
+        max-width: 750px;
+    }
+
+    .nav-btn {
+        font-size: 2.5em;
+        padding-inline: 9px;
+        /* начальный отступ элемента по строчной оси из за inline  */
+        padding-bottom: 3px;
+        /* уменьшили линии бургер кнопки  */
+        border: none;
+        /* убрали границы и сделали кнопку более квадратной  */
+        background-color: #1d6945;
+        color: azure;
+        display: block;
+        cursor: pointer;
+    }
+
+    .nav-btn:hover {
+        background-color: #094923;
+    }
+
+    .nav ul {
+        display: none;
+    }
+
+    .drop:hover .drop2 ul {
+        display: flex;
+        position: absolute;
+        background-color: #1d6945;
+        z-index: 3;
+        /* сделали отображение наверх тк следующие блок видео */
+        flex-direction: column;
+        right: 0.5px;
+        /* отступ для меня справа что бы было видно */
+    }
+
+    .nav {
+        order: 3;
+    }
+
+    .Campany>h1 {
+        font-size: 20px;
+    }
+
+    .text-pochta a {
+        font-size: 14px;
+    }
+
+    .phone p {
+        font-size: 14px;
+    }
+
+    /* редакция планшет сотурдничество для формы */
+    .video2str {
+        height: 86vh;
+    }
+
+    .video2str video {
+        height: 86vh;
+    }
+
+    .effect {
+        height: 86vh;
+    }
+
+
+
+
+
+
+
+
+    /* футур */
+    .inn1_2 {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .inn2 {
+        padding: 0px;
+    }
+
+    .prava {
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .prava a {
+        padding: 0px;
+    }
+
+    /* оптимизация формы для планшета */
+    .form_input {
+        width: 600px;
+    }
+
+    .form {
+        /* установили макс. ширину */
+        max-width: 600px;
+    }
+
+    .form_button {
+        width: 104%;
+    }
+}
+
+
+/* для моб устройств */
+@media (max-width:767px) {
+    .contaner {
+        max-width: none;
+    }
+
+    /* блок 1 меню, бургер, вся верхняя шапка */
+    .nav-btn {
+        font-size: 2.5em;
+        padding-inline: 9px;
+        /* начальный отступ элемента по строчной оси из за inline  */
+        padding-bottom: 3px;
+        /* уменьшили линии бургер кнопки  */
+        border: none;
+        /* убрали границы и сделали кнопку более квадратной  */
+        background-color: #1d6945;
+        color: azure;
+        display: block;
+        cursor: pointer;
+    }
+
+    .nav-btn:hover {
+        background-color: #094923;
+    }
+
+    .nav ul {
+        display: none;
+    }
+
+    .drop:hover .drop2 ul {
+        display: flex;
+        position: absolute;
+        background-color: #1d6945;
+        z-index: 3;
+        /* сделали отображение наверх тк следующие блок видео */
+        flex-direction: column;
+        right: 0.5px;
+        /* отступ для меня справа что бы было видно */
+    }
+
+    .nav {
+        order: 3;
+    }
+
+    .Campany>h1 {
+        font-size: 18px;
+    }
+
+    .text-pochta a {
+        font-size: 12px;
+    }
+
+    .phone p {
+        font-size: 12px;
+    }
+
+    .shapka {
+        height: 78px;
+    }
+
+    .Campany {
+        padding: 1px;
+        margin: 10px;
+    }
+
+    .Contacti {
+        padding: 1px;
+        margin: 10px;
+    }
+
+
+
+    .video2str {
+        height: 76vh;
+    }
+
+    .video2str video {
+        height: 76vh;
+    }
+
+    .effect {
+        height: 76vh;
+    }
+
+
+    /* футур */
+    .inn1_2 {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .inn2 {
+        padding: 0px;
+    }
+
+    .prava {
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+    }
+
+
+    .prava a {
+        padding: 0px;
+    }
+
+
+
+
+
+
+    /* оптимизация формы для смартфона */
+    .form_input {
+        width: 312px;
+    }
+
+    .form {
+        /* установили макс. ширину */
+        max-width: 350px;
+    }
+
+    .form_button {
+        width: 100%;
+    }
+
+
+
+}
+
+/* для моб устройств c малым экраном*/
+@media (max-width:600px) {
+    .contaner {
+        max-width: none;
+    }
+
+    .nav {
+        order: 3;
+    }
+
+    .Campany>h1 {
+        font-size: 18px;
+    }
+
+    .text-pochta a {
+        font-size: 12px;
+    }
+
+    .phone p {
+        font-size: 12px;
+    }
+
+    .shapka {
+        height: 78px;
+    }
+
+    .Campany {
+        padding: 1px;
+        margin: 10px;
+    }
+
+    .Contacti {
+        padding: 1px;
+        margin: 10px;
+    }
+
+
+    .video2str {
+        height: 76vh;
+    }
+
+    .video2str video {
+        height: 76vh;
+    }
+
+    .effect {
+        height: 76vh;
+    }
+
+
+
+    .wrapper {
+        line-height: 1;
+        font-size: 8px;
+    }
+
+    .form {
+        padding: 2px 0;
+    }
+
+    .form_title {
+        font-size: 16px;
+    }
+
+    .form_item {
+        margin: 0px 0px 5px 0px;
+    }
+
+    .checkbox_label {
+        font-size: 10px;
+    }
+
+    /* футур */
+    .inn1_2 {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .inn2 {
+        padding: 0px;
+    }
+
+    .prava {
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+    }
+
+
+    .prava a {
+        padding: 0px;
+    }
+
+    /* оптимизация формы для смартфона */
+    .form_input {
+        width: 250px;
+    }
+
+    .form {
+        /* установили макс. ширину */
+        max-width: 275px;
+    }
+
+    .form_title {
+        min-width: 100%;
+    }
+}

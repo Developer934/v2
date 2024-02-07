@@ -1,0 +1,123 @@
+body {
+    font-family: 'Cuprum', sans-serif;
+}
+
+
+
+.video2str {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    /* что бы достать текст повех видео, нужно применить свойства 
+    индексов, они работают только при родительском контейнере flex */
+    display: flex;
+    justify-content: center;
+    /* центрируем текст на видео 
+    и ниже по вертикали */
+
+}
+
+/* обращаемся к самому тегу видео */
+.video2str video {
+    /* задаем размер видео 70% от экрана которое видим */
+    height: 100vh;
+    /* ширина 100 проц от экрана */
+    width: 100%;
+    position: absolute;
+    /* позволяет писать поверх видео, делая его фоном */
+    top: 0;
+    /* top определяет расстояние от верхнего 
+    края элемента до верхнего края его ближайшего*/
+    left: 0;
+    /* определяет расстояние от левого края родительского 
+    элемента, не включая отступ, поле и ширину рамки, 
+    до левого края дочернего элемента.*/
+    object-fit: cover;
+    /* определяет как <img> или <video> 
+    будет заполнять контейнер, то есть если поля не вместяться, 
+    то изобрежение будет образано и центровано*/
+    z-index: 1;
+    /* индекс 1 позволяет видео убрать под низ
+     и печатать текст сверху */
+}
+
+.text-video {
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    z-index: 2;
+    /* индекс 2 позволяет видео убрать наверх
+     и печатать текст сверху */
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.text-video_content {
+    margin: auto 0;
+}
+
+
+/* можем затемнить видео, взяв свойство самого тега видео в которому 
+обращались через класс */
+.effect {
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    z-index: 2;
+    /* индекс 2 так же позволяет затемнить видео */
+    background-color: rgba(0, 0, 0, 0.324);
+
+}
+
+
+
+@media (max-width:1024px) {
+    .contaner {
+        max-width: 750px;
+    }
+
+    .video2str {
+        height: 53vh;
+    }
+
+    .video2str video {
+        height: 53vh;
+    }
+
+    .effect {
+        height: 53vh;
+    }
+
+    .text-video {
+        font-size: 12px;
+        text-align: center;
+    }
+}
+
+
+
+@media (max-width:767px) {
+    .contaner {
+        max-width: none;
+    }
+
+    .video2str {
+        height: 33vh;
+    }
+
+    .video2str video {
+        height: 33vh;
+    }
+
+    .effect {
+        height: 33vh;
+    }
+
+    .text-video {
+        font-size: 10px;
+        text-align: center;
+    }
+}

@@ -1,0 +1,847 @@
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+*,
+*:before,
+*:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/* !!уравняли поведение всех свойств в разны браузера и айфонах */
+html,
+body {
+    height: 100%;
+    width: 100%;
+    font-size: 100%;
+    line-height: 1;
+    font-size: 14px;
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    font-family: 'Cuprum', sans-serif;
+    background-color: #1E4F52;
+}
+
+/* 1 блок  */
+/* 1 блок-столб строки название */
+li {
+    list-style: none;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+.shapka {
+    min-height: 75px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 24px;
+    color: white;
+    gap: 130px;
+}
+
+.Campany>h1 {
+    font-size: 30px;
+}
+
+.Campany>h4 {
+    margin-top: 2px;
+}
+
+.Campany {
+    text-align: center;
+}
+
+
+/* 2 блок-столб строки название */
+.nav-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+}
+
+.nav-branding {
+    font-size: 2rem;
+}
+
+.nav-link {
+    transition: 0.7s ease;
+}
+
+.nav-link:hover {
+    color: dodgerblue;
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: white;
+}
+
+/* 3 блок-столб строки название */
+.Contacti {
+    display: block;
+    align-items: center;
+}
+
+.text-pochta a {
+    text-decoration: none;
+    color: azure;
+    font-size: 18px;
+}
+
+.phone p {
+    text-decoration: none;
+    color: azure;
+    font-size: 18px;
+}
+
+
+
+
+/* 3 блок на ушислуги */
+.uslugi {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #1E4F52;
+    margin: 50px;
+}
+
+.usl1 img {
+    width: 320px;
+    height: 137px;
+}
+
+.usl1 {
+    display: flex;
+    gap: 25px;
+}
+
+.text-pod-bloka {
+    text-align: center;
+    flex-direction: column;
+}
+
+.edenicabloka {
+    display: flex;
+    background-color: #c7c1c1;
+    flex-direction: column;
+    margin: 15px;
+    border: solid;
+    border-width: 0.2px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.block1,
+.block2 {
+    padding: 25px;
+}
+
+.text-usl h1 {
+    color: white;
+    text-align: center;
+}
+
+
+/* 4 блок на преймущества (1 плюс )*/
+.plus {
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+    background-color: #1E4F52;
+    margin: 50px;
+    color: white;
+}
+
+.pl-bloc1 img {
+    width: 400px;
+    height: 310px;
+}
+
+.pl1 {
+    display: flex;
+    justify-content: center;
+}
+
+.pl-bloc2 {
+    display: flex;
+    flex-direction: column;
+    padding: 14px;
+    line-height: 1.5;
+}
+
+.pl-bloc2 h3 {
+    text-align: center;
+}
+
+.textpl2 h3 {
+    text-align: center;
+}
+
+
+
+/* (5 блок куда возим )*/
+.pl2 {
+    display: flex;
+    background-color: #1E4F52;
+    justify-content: space-around;
+    color: white;
+    padding-top: 30px;
+}
+
+.map img {
+    max-width: 100%;
+    max-height: 600px;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.left1 img,
+.left2 img,
+.right1 img,
+.right2 img {
+    max-width: 100%;
+    max-height: 300px;
+}
+
+.left {
+    display: flex;
+    flex-direction: column;
+}
+
+.map {
+    display: flex;
+    flex-direction: column;
+}
+
+.right {
+    display: flex;
+    flex-direction: column;
+}
+
+.left1,
+.left2,
+.right1,
+.right2 {
+    display: flex;
+    background-color: #000000;
+    flex-direction: column;
+    margin: 0px 5px 5px 5px;
+    border: solid;
+    border-width: 0.2px;
+    color: #fff;
+    text-align: center;
+    border-radius: 7px;
+    overflow: hidden;
+}
+
+.map h3 {
+    text-align: center;
+}
+
+/* 6 блок с блок с кем работаем */
+.logo {
+    background-color: #1E4F52;
+    /*background: linear-gradient(35deg, #111 0%, #222 25%, #333 50%, #222 75%, #111 100%);*/
+    /* background: linear-gradient(35deg, #101613 0%, #44474529 40%, #2c3833 80%); */
+    /* background-color: #1d6945;*/
+}
+
+.foto li {
+    background: #ffffff;
+    display: inline-block;
+    margin: 10px;
+    padding: 0%;
+    border: solid;
+    border-width: 0.5px;
+}
+
+
+.foto img {
+    /* убирает боковые/нижний проблемы в инлайновом блоке */
+    vertical-align: top;
+    max-width: 100%;
+    height: 45px;
+}
+
+.test-n-p {
+    display: flex;
+    justify-content: center;
+    font-size: 19px;
+    font-weight: bold;
+    color: white;
+    padding: -5;
+}
+
+
+
+/* футер или низ контактная информацияы */
+html,
+body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+.main {
+    flex: 1 0 auto;
+}
+
+.footer {
+    background-color: #121212;
+    display: flex;
+    list-style: none;
+    color: azure;
+    font-size: 16px;
+    flex-direction: column;
+}
+
+.inn1_2 {
+    display: flex;
+    justify-content: space-between;
+    padding: 25px;
+}
+
+.inn {
+    display: flex;
+    flex-direction: column;
+}
+
+.inn2 {
+    display: flex;
+    flex-direction: column;
+    padding: 8px;
+}
+
+.prava {
+    display: flex;
+    padding: 20px;
+    justify-content: center;
+}
+
+
+.prava a {
+    text-decoration: underline;
+    color: azure;
+    padding: 10px;
+}
+
+
+/* кнопка бургер для адаптива скрыли её  */
+.nav-btn {
+    display: none;
+}
+
+
+
+/* Адаптация для всех устройств, минимальная ширина что бы блоки не ехали*/
+@media (max-width:1200px) {
+    .contaner {
+        max-width: 970px;
+    }
+}
+
+/* для планшетов */
+@media (max-width:1024px) {
+    .contaner {
+        max-width: 750px;
+    }
+
+    .hamburger {
+        display: block;
+        order: 3;
+    }
+
+    .hamburger.active.br:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active.br:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active.br:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .nav-menu {
+        position: fixed;
+        left: -120%;
+        top: 70px;
+        gap: 0;
+        flex-direction: column;
+        background-color: #0e100fe4;
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        z-index: 3;
+    }
+
+    .nav-item {
+        margin: 16px 0;
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    .shapka {
+        gap: 120px;
+    }
+
+
+    /* наши услуги для планшета блок 3 */
+    .usl1 {
+        flex-direction: column;
+    }
+
+
+    .for2column {
+        display: flex;
+
+    }
+
+    .text-usl h1 {
+        font-size: 18px;
+    }
+
+    /* 4  блок преймущества */
+    .plus {
+        padding: 15px;
+        margin: 1px;
+    }
+
+    .pl-bloc1 img {
+        width: 220px;
+        height: 200px;
+    }
+
+    .pl-bloc2 h3 {
+        font-size: 16px;
+    }
+
+    .pl-bloc2 h4 {
+        font-size: 14px;
+    }
+
+
+    /* куда возим блок 5 */
+    .map {
+        order: -3;
+        flex-direction: column;
+    }
+
+    .pl2 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .left1,
+    .left2,
+    .right1,
+    .right2 {
+        width: 394px;
+        height: 240px;
+    }
+
+    .left {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .right {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .map {
+        display: flex;
+        align-items: center;
+    }
+
+    .map img {
+        width: 800px;
+        height: 550px;
+    }
+
+    .left1 img,
+    .left2 img {
+        width: 394px;
+        height: 220px;
+    }
+
+    .right1 img,
+    .right2 img {
+        width: 394px;
+        height: 220px;
+    }
+
+
+
+    /* футур */
+    .inn1_2 {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .inn2 {
+        padding: 0px;
+    }
+
+    .prava {
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .prava a {
+        padding: 0px;
+    }
+
+
+
+
+}
+
+
+/* для моб устройств */
+@media (max-width:767px) {
+    .contaner {
+        max-width: none;
+    }
+
+    .hamburger {
+        display: block;
+        order: 3;
+    }
+
+    .hamburger.active.br:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active.br:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active.br:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .nav-menu {
+        position: fixed;
+        left: -120%;
+        top: 70px;
+        gap: 0;
+        flex-direction: column;
+        background-color: #0e100fe4;
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        z-index: 3;
+    }
+
+    .shapka {
+        gap: 2px;
+    }
+
+    .nav-item {
+        margin: 16px 0;
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    .Campany>h1 {
+        font-size: 18px;
+    }
+
+    .Campany>h4 {
+        margin-top: 0px;
+        font-size: 12px;
+    }
+
+    .text-pochta a {
+        font-size: 12px;
+    }
+
+    .phone p {
+        font-size: 12px;
+    }
+
+
+    /* 2 и остальные блоки */
+
+    .Campany {
+        padding: 1px;
+        margin: 10px;
+    }
+
+    .Contacti {
+        padding: 1px;
+        margin: 10px;
+    }
+
+    /* блок 3 услуги */
+    .for2column {
+        flex-direction: column;
+    }
+
+    .text-usl h1 {
+        font-size: 15px;
+    }
+
+    .usl1 img {
+        max-width: 100%;
+        max-height: 100%;
+    }
+
+    .uslugi {
+        margin: 1px;
+    }
+
+    /* блок 4 преймущества */
+    .plus {
+        padding: 5px;
+        margin: 1px;
+    }
+
+    .pl-bloc1 img {
+        width: 150px;
+        height: 120px;
+    }
+
+    .pl2 h3 {
+        text-align: center;
+    }
+
+    .pl-bloc2 h3 {
+        font-size: 15px;
+    }
+
+    .pl-bloc2 h4 {
+        font-size: 12px;
+    }
+
+
+    /* футур */
+    .inn1_2 {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .inn2 {
+        padding: 0px;
+    }
+
+    .prava {
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+    }
+
+
+    .prava a {
+        padding: 0px;
+    }
+
+
+
+    /* блок 5 куда возим */
+    .left,
+    .right {
+        display: none;
+    }
+
+    .map img {
+        width: 405px;
+        height: 295px;
+    }
+}
+
+/* для моб устройств старше 4х лет */
+@media (max-width:600px) {
+    .contaner {
+        max-width: none;
+    }
+
+    .hamburger {
+        display: block;
+        order: 3;
+    }
+
+    .hamburger.active.br:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active.br:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active.br:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .nav-menu {
+        position: fixed;
+        left: -120%;
+        top: 70px;
+        gap: 0;
+        flex-direction: column;
+        background-color: #0e100fe4;
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        z-index: 3;
+    }
+
+    .shapka {
+        gap: 0px;
+        font-size: 9px;
+    }
+
+    .nav-item {
+        margin: 16px 0;
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    .Campany>h1 {
+        font-size: 18px;
+    }
+
+    .Campany>h4 {
+        margin-top: 0px;
+        font-size: 12px;
+    }
+
+    .text-pochta a {
+        font-size: 12px;
+    }
+
+    .phone p {
+        font-size: 12px;
+    }
+
+
+
+    /* 2 и остальные блоки */
+
+    .Campany {
+        padding: 1px;
+        margin: 10px;
+    }
+
+    .Contacti {
+        padding: 1px;
+        margin: 10px;
+    }
+
+    /* блок 3 услуги */
+    .for2column {
+        flex-direction: column;
+    }
+
+    .text-usl h1 {
+        font-size: 14px;
+    }
+
+    .usl1 img {
+        max-width: 100%;
+        max-height: 100%;
+    }
+
+    .uslugi {
+        margin: 1px;
+    }
+
+    /* блок 4 преймущества */
+    .plus {
+        padding: 5px;
+        margin: 1px;
+    }
+
+    .pl-bloc1 img {
+        width: 100%;
+        height: 30%;
+    }
+
+    .pl2 h3 {
+        text-align: center;
+    }
+
+    .pl-bloc2 h3 {
+        font-size: 15px;
+    }
+
+    .pl-bloc2 h4 {
+        font-size: 12px;
+    }
+
+
+    /* футур */
+    .inn1_2 {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .inn2 {
+        padding: 0px;
+    }
+
+    .prava {
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+    }
+
+
+    .prava a {
+        padding: 0px;
+    }
+
+
+
+    /* блок 5 куда возим */
+    .left,
+    .right {
+        display: none;
+    }
+
+    .map img {
+        width: 100%;
+        height: 100%;
+    }
+}
